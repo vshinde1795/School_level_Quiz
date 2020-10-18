@@ -56,6 +56,7 @@ def start(request, quiz_id):
     return render(request, 'quiz_start.html', {'question': question, 'enabled': True})
 
 
+
 score11 = []
 def next(request):
     global visited, all_question, score, options, score11, initial_time
