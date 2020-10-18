@@ -53,13 +53,10 @@ def start(request, quiz_id):
     initial_time = time.time()
     all_question = Question.objects.filter(quiz_id=quiz_id)
     question = all_question[visited]
-    print(question)
     return render(request, 'quiz_start.html', {'question': question, 'enabled': True})
 
 
 score11 = []
-
-
 def next(request):
     global visited, all_question, score, options, score11, initial_time
 
@@ -67,8 +64,6 @@ def next(request):
         options = request.POST.getlist('options')
         options1 = ','.join(str(i) for i in score11)
         action = request.POST.get('action')
-        print("Actionssss:", action)
-        # print("options:",options)
         if action == 'Next':
             previous = all_question[visited]
             correct_answer = getattr(previous, 'correct_ans')
@@ -79,7 +74,6 @@ def next(request):
             visited += 1
             if len(all_question) > visited:
                 question = all_question[visited]
-
                 context = {
                     'question': question,
                     'enabled': True
@@ -129,12 +123,6 @@ def save_quiz(request):
         quiz_name = request.POST['quiz_name']
         qz = Quiz(quiz_name=quiz_name)
         qz.save()
-        # qz_obj = qz.save()
-        print("qz_id is ")
-        print(qz.id)
-
-        # qz_id = qz_obj.id
-        # print(qz_id)
         for i in range(1, 11, 1):
             question = request.POST['ques_' + str(i)]
             option_a = request.POST['option_' + str(i) + '_a']
