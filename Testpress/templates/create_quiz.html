@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create quiz</title>
+</head>
+<body bgcolor="cyan">
+
+<form action="\save_quiz\" method="post">
+    {% csrf_token %}
+    Quiz Name: <input type="text" name="quiz_name" required><br>
+    Question 1: <input type="text" name="ques_1" size="50" required><br>
+    Option A:<input type="text" name="option_1_a" required>
+    Option B:<input type="text" name="option_1_b" required>
+    Option C:<input type="text" name="option_1_c" required>
+    Option D:<input type="text" name="option_1_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_1" required><br><br>
+
+    Question 2: <input type="text" name="ques_2" size="50" required><br>
+    Option A:<input type="text" name="option_2_a" required>
+    Option B:<input type="text" name="option_2_b" required>
+    Option C:<input type="text" name="option_2_c" required>
+    Option D:<input type="text" name="option_2_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_2" required><br><br>
+
+    Question 3: <input type="text" name="ques_3" size="50" required><br>
+    Option A:<input type="text" name="option_3_a" required>
+    Option B:<input type="text" name="option_3_b" required>
+    Option C:<input type="text" name="option_3_c"required>
+    Option D:<input type="text" name="option_3_d"required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_3"required><br><br>
+
+    Question 4: <input type="text" name="ques_4" size="50" required><br>
+    Option A:<input type="text" name="option_4_a" required>
+    Option B:<input type="text" name="option_4_b" required>
+    Option C:<input type="text" name="option_4_c" required>
+    Option D:<input type="text" name="option_4_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_4" required><br><br>
+
+    Question 5: <input type="text" name="ques_5" size="50" required><br>
+    Option A:<input type="text" name="option_5_a" required>
+    Option B:<input type="text" name="option_5_b" required>
+    Option C:<input type="text" name="option_5_c" required>
+    Option D:<input type="text" name="option_5_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_5" required><br><br>
+
+    Question 6: <input type="text" name="ques_6" size="50" required><br>
+    Option A:<input type="text" name="option_6_a" required>
+    Option B:<input type="text" name="option_6_b" required>
+    Option C:<input type="text" name="option_6_c" required>
+    Option D:<input type="text" name="option_6_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_6" required><br><br>
+
+    Question 7: <input type="text" name="ques_7" size="50" required><br>
+    Option A:<input type="text" name="option_7_a" required>
+    Option B:<input type="text" name="option_7_b" required>
+    Option C:<input type="text" name="option_7_c" required>
+    Option D:<input type="text" name="option_7_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_7" required><br><br>
+
+    Question 8: <input type="text" name="ques_8" size="50" required><br>
+    Option A:<input type="text" name="option_8_a" required>
+    Option B:<input type="text" name="option_8_b" required>
+    Option C:<input type="text" name="option_8_c" required>
+    Option D:<input type="text" name="option_8_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_8" required><br><br>
+
+    Question 9: <input type="text" name="ques_9" size="50" required><br>
+    Option A:<input type="text" name="option_9_a" required>
+    Option B:<input type="text" name="option_9_b" required>
+    Option C:<input type="text" name="option_9_c" required>
+    Option D:<input type="text" name="option_9_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_9" required><br><br>
+
+    Question 10: <input type="text" name="ques_10" size="50" required><br>
+    Option A:<input type="text" name="option_10_a" required>
+    Option B:<input type="text" name="option_10_b" required>
+    Option C:<input type="text" name="option_10_c" required>
+    Option D:<input type="text" name="option_10_d" required>
+    Correct Answer: <input type="text" placeholder="abcd" name="correct_ans_10" required><br><br><br>
+    <big><input type="submit" value="Save"></big>
+
+</form>
+<button><a href="\">Home</a></button>
+</body>
+</html>

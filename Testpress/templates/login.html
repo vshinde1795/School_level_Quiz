@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body bgcolor="cyan">
+<table bgcolor="grey" width=100%>
+    <td>
+        <center>
+            <h1>School Quiz</h1>
+        </center>
+    </td>
+</table>
+<h2><a href="/">back</a> </h2>
+<label><h1> Login for creating new quiz. </h1></label>
+
+<form action="\school/login\" method="post">
+        {%csrf_token%}
+        <br>
+        Enter Username:<input type="text" id="uname" placeholder="abc123" name="username" required><br><br>
+        Enter Password:<input type="password" id="password" placeholder="password"name="password" required><br><br>
+        <input type="submit" value="login"><br>
+</form>
+</body>
+</html>

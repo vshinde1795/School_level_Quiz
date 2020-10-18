@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Quiz</title>
+</head>
+<body bgcolor="cyan">
+<button> <a href="\">Home</a></button>
+<h2> Attend all the questions.</h2>
+{% for i in all_quiz %}
+<big>Quiz Name: <td>{{i.quiz_name}}</td></big>
+<big>:<a href="\start/{{i.id }}\">start</a></big><br>
+<br>
+{% endfor %}
+</body>
+</html>

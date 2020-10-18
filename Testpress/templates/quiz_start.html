@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz start</title>
+</head>
+<body bgcolor="cyan">
+<h1>quiz start</h1>
+<form action="\next\" method="post">
+    {% if not temp %}
+            {% csrf_token %}
+        <big>Question: </big><td>{{question.question}}</td><br>
+        <input type="checkbox" id ="a" name = "options" value="a" {% if not enabled %} disabled {% endif%} {% if option_a %} checked {% endif%}>
+        <label for="a">Option A:{{question.option_a}}</label> <br>
+        <input type="checkbox" id="b" name = "options" value="b" {% if not enabled %} disabled {% endif%} {% if option_b %} checked {% endif%}>
+        <label for="b"> Option B:{{question.option_b}}</label><br>
+        <input type="checkbox" id="c" name = "options" value="c" {% if not enabled %} disabled {% endif%} {% if option_c %} checked {% endif%}>
+        <label for="c"> Option C:{{question.option_c}}</label><br>
+        <input type="checkbox" id ="d" name = "options" value="d" {% if not enabled %} disabled {% endif%} {% if option_d %} checked {% endif%}>
+        <label for="d"> Option D:{{question.option_d}}</label><br>
+        <br>
+        {% if not enabled %}
+        Correct Answer: {{question.correct_ans}}
+        {% endif%}
+        <br>
+        <input type="submit" value="Next" name="action">
+          {% if enabled %} <input type="submit" value="Submit" name = "action"> {% endif%}
+    </form>
+    {% endif %}
+
+{% if temp %}
+
+    <h1>Score out of 10 : {{score}}</h1>
+    <h2>Total Time:{{total_time}}</h2>
+    <h2> finish...</h2>
+    <button><a href="\">Logout</a> </button>
+
+{% endif %}
+</body>
+</html>

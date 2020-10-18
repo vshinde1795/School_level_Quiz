@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body bgcolor="cyan">
+<table bgcolor="grey" width=100%>
+    <td>
+        <center>
+
+            <h1> School Quiz</h1>
+        </center>
+    </td>
+</table>
+ <label> <a href="/"><h2>back</h2></a> </label>
+<h1>School Admin Registration .</h1>
+
+<form action="\signup\" method="post" onsubmit=" return checkblank()">
+    {% csrf_token %}
+    <fieldset>
+        <ol type="1">
+            <li>Enter Username:<input type="text" id="uname" class="input"  name="username"></li><br>
+            <li>Enter Teacher First name:<input type="text" id="fname" name="first_name"></li><br>
+            <li>Enter Teacher Last name:<input type="text" id="lname" name="last_name"></li><br>
+            <li>Enter Email id:&nbsp;&nbsp;&nbsp<input type="email" id="eml" placeholder="abc@gmail.com" name="email"></li><br>
+            <li>Enter Password:&nbsp;<input type="password" id="password"  name="password"></li><br>
+            <input type="submit" value="Save">
+
+        </ol>
+    </fieldset>
+</form>
+<script>
+    function checkblank(){
+    if(document.getElementById('uname').value=="") {
+        alert('Please enter your user name');
+        return false;
+        }
+    if(document.getElementById('fname').value=="") {
+        alert('Please enter your first name');
+        return false;
+        }
+    if(document.getElementById('lname').value=="") {
+        alert('Please enter your Last name');
+        return false;
+        }
+    if(document.getElementById('password').value=="") {
+        alert('Please enter your password');
+        return false;
+        }
+    }
+
+
+</script>
+</body>
+</html>
