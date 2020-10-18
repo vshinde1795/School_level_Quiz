@@ -45,7 +45,6 @@ score = 0
 options = []
 initial_time = 0
 
-
 def start(request, quiz_id):
     global ques_id, visited, all_question, initial_time, score
     visited = 0
