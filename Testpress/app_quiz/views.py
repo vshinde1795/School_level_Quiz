@@ -11,7 +11,6 @@ def home(request):
     return render(request, 'home.html')
 
 
-
 def student_login(request):
     all_quiz = Quiz.objects.all()
     return render(request, 'all_quiz.html', {'all_quiz': all_quiz})
