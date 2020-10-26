@@ -6,7 +6,6 @@ import time
 from .models import Quiz, Question
 from datetime import date
 
-
 def home(request):
     return render(request, 'home.html')
 
